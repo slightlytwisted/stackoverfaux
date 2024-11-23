@@ -1,0 +1,40 @@
+{
+  "name": "stackoverfaux",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build-ts": "tsc",
+    "build": "npm run build-ts && npm run lint && npm run pretty-check",
+    "dbinit": "node --env-file=.env dist/dbinit.js",
+    "dbload": "node --env-file=.env dist/dbload.js",
+    "dbreset": "DELETE_DB=true npm run dbinit && npm run dbload",
+    "lint": "eslint .",
+    "pretty-check": "prettier . --check",
+    "prettify": "prettier . --write",
+    "serve": "node --env-file=.env dist/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "@types/express": "^5.0.0",
+    "@types/he": "^1.2.3",
+    "@types/pg": "^8.11.10",
+    "@types/string-strip-html": "^5.0.0",
+    "eslint": "^9.15.0",
+    "prettier": "3.3.3",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.15.0"
+  },
+  "dependencies": {
+    "express": "^4.21.1",
+    "he": "^1.2.0",
+    "http-status-codes": "^2.3.0",
+    "pg": "^8.13.1",
+    "string-strip-html": "^13.4.8"
+  }
+}
