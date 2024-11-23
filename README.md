@@ -5,7 +5,7 @@ This is an implementation of the [Sayari Full Stack Developer Code Challenge](ht
 ## Running
 
 [`docker-compose.yaml`](./docker-compose.yaml) defines a Docker stack that will build the application, spin up a
-Postgres database, create the `stackoverfaux` database, populate it with the data provided contained in
+Postgres database, create the `stackoverfaux` database, populate it with the data contained in
 [`stackoverfaux.json`](./stackoverfaux.json), and then start up the application on local port `3000`.
 
 ```
